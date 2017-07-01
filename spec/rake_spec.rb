@@ -1,9 +1,9 @@
 require 'spec_helper'
 require 'rake'
+__END__
 
-
-describe "Rakefile" do 
-  before(:all) do 
+describe "Rakefile" do
+  before(:all) do
     load File.expand_path("../../Rakefile", __FILE__)
   end
 
@@ -29,7 +29,7 @@ describe "Rakefile" do
 
   describe 'namespace :db' do
 
-    describe 'db:migrate' do 
+    describe 'db:migrate' do
       it "invokes the :environment task as a dependency" do
         expect(Rake::Task["db:migrate"].prerequisites).to include("environment")
       end
@@ -46,7 +46,7 @@ describe "Rakefile" do
       before(:each) do
         clear_database
         recreate_table
-      end 
+      end
 
       it "seeds the database with dummy data from a seed file" do
         Rake::Task["db:seed"].invoke
