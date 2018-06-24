@@ -1,6 +1,6 @@
 # Intro to Rake
 
-## Objectives
+## Objectiveks
 
 1. Introduce Rake and Rake tasks. 
 2. Understand what Rake is used for in our Ruby programs.
